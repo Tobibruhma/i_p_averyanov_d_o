@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/loglogo"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
 
         android:src="@drawable/kitayoza"
 
@@ -24,7 +24,7 @@
         style="@style/BaseET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="50dp"
         android:hint="Почта"
         android:padding="15dp"
         android:textColor="@color/black"
@@ -78,7 +78,7 @@
         android:layout_marginRight="40dp"
         android:background="@drawable/fields"
         android:gravity="center"
-        android:onClick="RegToLog"
+
         android:text="Регистрация"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -86,8 +86,14 @@
         app:backgroundTint="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rep_pass_input"
-        app:layout_constraintVertical_bias="0.395" />
+        app:layout_constraintVertical_bias="0.669"
+        android:onClick="RegToLog"
+        />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

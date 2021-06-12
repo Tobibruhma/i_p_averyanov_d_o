@@ -10,8 +10,8 @@
     <ImageView
         android:id="@+id/loglogo"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="150dp"
+
         android:src="@drawable/kitayoza"
         app:layout_constraintBottom_toTopOf="@+id/male_input"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +24,7 @@
         style="@style/BaseET"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="80dp"
         android:hint="Почта"
         android:padding="15dp"
         android:textColor="@color/black"
@@ -41,7 +41,7 @@
         style="@style/BaseET"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="15dp"
         android:hint="Пароль"
         android:inputType="textPassword"
         android:padding="15dp"

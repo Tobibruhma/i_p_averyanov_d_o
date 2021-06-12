@@ -1,6 +1,8 @@
 package com.example.i_p_averyanov_d_o;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -27,4 +29,9 @@ public class HomeActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
     }
 
+    public void GoToCatalog(View view)
+    {
+        Intent cat_intent = new Intent(HomeActivity.this, CatalogActivity.class);
+        startActivity(cat_intent);
+    }
 }
