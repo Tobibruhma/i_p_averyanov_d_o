@@ -16,7 +16,13 @@ import android.view.View;
 
      public void GoToLogin(View view)
      {
-         Intent logintent = new Intent(MainActivity.this, HomeActivity.class);
+         Intent logintent = new Intent(MainActivity.this, LoginActivity.class);
          startActivity(logintent);
+     }
+
+     public void GoToReg(View view)
+     {
+         Intent regint = new Intent(MainActivity.this, RegisterActivity.class);
+         startActivity(regint);
      }
  }
