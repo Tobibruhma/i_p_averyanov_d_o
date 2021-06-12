@@ -34,4 +34,16 @@ public class HomeActivity extends AppCompatActivity {
         Intent cat_intent = new Intent(HomeActivity.this, CatalogActivity.class);
         startActivity(cat_intent);
     }
+
+    public void GoToStory(View view)
+    {
+        Intent stor_intet = new Intent(HomeActivity.this, StoryActivity.class);
+        startActivity(stor_intet);
+    }
+
+    public void GoToCreditionals(View view)
+    {
+        Intent cred_intent = new Intent (HomeActivity.this, CreditionalsActivity.class);
+        startActivity(cred_intent);
+    }
 }

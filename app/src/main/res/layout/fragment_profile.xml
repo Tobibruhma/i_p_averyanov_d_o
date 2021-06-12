@@ -52,22 +52,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView4" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:background="@drawable/fields"
-        android:backgroundTint="@color/red"
-        android:text="Перейти к истории покупок"
-        app:backgroundTint="@color/red"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        />
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/fields"
+                    android:backgroundTint="@color/red"
+                    android:onClick="GoToStory"
+
+                    android:text="Перейти к истории покупок"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/red"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.463"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    tools:ignore="OnClick" />
 
     <Button
         android:id="@+id/go_to_story_button"
@@ -80,9 +83,11 @@
         android:backgroundTint="@color/red"
         android:text="ПЕРСОНАЛЬНЫЕ ДАННЫЕ"
         app:backgroundTint="@color/red"
+        android:onClick="GoToCreditionals"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        tools:ignore="OnClick" />
 
                 <TextView
                     android:id="@+id/textView3"
