@@ -22,4 +22,10 @@
         android:name="com.example.i_p_averyanov_d_o.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.i_p_averyanov_d_o.ProfileFragment"
+        android:label="@string/profile_string"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

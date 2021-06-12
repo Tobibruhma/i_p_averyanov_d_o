@@ -16,4 +16,10 @@
         android:icon="@drawable/ic_baseline_shopping_cart_24"
         android:title="@string/buscket" />
 
+    <item
+            android:id="@+id/navigation_profile"
+        android:icon="@drawable/user"
+        android:title="Профиль"
+        />
+
 </menu>

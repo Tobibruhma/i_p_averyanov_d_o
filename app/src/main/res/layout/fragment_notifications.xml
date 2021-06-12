@@ -120,7 +120,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="25dp"
             android:background="@drawable/fields"
             android:text="КУПИТЬ"
             app:backgroundTint="#951414"

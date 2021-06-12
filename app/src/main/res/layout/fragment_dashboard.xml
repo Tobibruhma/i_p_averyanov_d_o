@@ -18,7 +18,9 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
+            style="@style/BaseET"
+            android:padding="10dp"
             android:drawableLeft="@drawable/search_icon"
             android:hint="Моторное масло"
             android:textColor="@color/black"
@@ -29,9 +31,10 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
 
 
             <ImageView
