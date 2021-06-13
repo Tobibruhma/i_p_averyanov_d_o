@@ -25,7 +25,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/generator" />
+                android:src="@drawable/motornoe_maslo" />
 
             <ImageView
                 android:id="@+id/backButton"
@@ -37,7 +37,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/arrow"
-                tools:ignore="VectorDrawableCompat" />
+                tools:ignore="VectorDrawableCompat"
+                android:onClick="GoBackToCatalog"/>
+
 
             </FrameLayout>
 
