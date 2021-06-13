@@ -63,7 +63,7 @@
                 android:fontFamily="@font/roboto_bold_italic"
                 android:text="500₽"
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="23sp"
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/titleView"
                 app:layout_constraintTop_toBottomOf="@+id/titleView" />
@@ -72,10 +72,10 @@
                 android:id="@+id/descriptionView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="TextView"
-                android:textColor="#616161"
-                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:text="в наличии*"
+                android:textColor="#107509"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/priceView"
                 app:layout_constraintTop_toBottomOf="@+id/priceView" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -120,7 +120,7 @@
                 android:fontFamily="@font/roboto_bold_italic"
                 android:text="580₽"
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="22sp"
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/titleView2"
                 app:layout_constraintTop_toBottomOf="@+id/titleView2" />
@@ -129,10 +129,10 @@
                 android:id="@+id/descriptionView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="TextView"
-                android:textColor="#616161"
-                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:text="в наличии*"
+                android:textColor="#107509"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/priceView2"
                 app:layout_constraintTop_toBottomOf="@+id/priceView2" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -177,7 +177,7 @@
                 android:fontFamily="@font/roboto_bold_italic"
                 android:text="656₽"
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="22sp"
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/titleView3"
                 app:layout_constraintTop_toBottomOf="@+id/titleView3" />
@@ -186,10 +186,10 @@
                 android:id="@+id/descriptionView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="TextView"
-                android:textColor="#616161"
-                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:text="в наличии*"
+                android:textColor="#107509"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/priceView3"
                 app:layout_constraintTop_toBottomOf="@+id/priceView3" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -234,7 +234,7 @@
                 android:fontFamily="@font/roboto_bold_italic"
                 android:text="7300₽"
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="22sp"
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/titleView4"
                 app:layout_constraintTop_toBottomOf="@+id/titleView4" />
@@ -243,10 +243,10 @@
                 android:id="@+id/descriptionView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="TextView"
-                android:textColor="#616161"
-                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:text="в наличии*"
+                android:textColor="#107509"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/priceView4"
                 app:layout_constraintTop_toBottomOf="@+id/priceView4" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -291,7 +291,7 @@
                 android:fontFamily="@font/roboto_bold_italic"
                 android:text="16500₽"
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="22sp"
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/titleView5"
                 app:layout_constraintTop_toBottomOf="@+id/titleView5" />
@@ -300,10 +300,10 @@
                 android:id="@+id/descriptionView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="TextView"
-                android:textColor="#616161"
-                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:text="в наличии*"
+                android:textColor="#107509"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/priceView5"
                 app:layout_constraintTop_toBottomOf="@+id/priceView5" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -347,7 +347,7 @@
                 android:fontFamily="@font/roboto_bold_italic"
                 android:text="950₽"
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="22sp"
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/titleView6"
                 app:layout_constraintTop_toBottomOf="@+id/titleView6" />
@@ -356,10 +356,10 @@
                 android:id="@+id/descriptionView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="TextView"
-                android:textColor="#616161"
-                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:text="в наличии*"
+                android:textColor="#107509"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/priceView6"
                 app:layout_constraintTop_toBottomOf="@+id/priceView6" />
         </androidx.constraintlayout.widget.ConstraintLayout>

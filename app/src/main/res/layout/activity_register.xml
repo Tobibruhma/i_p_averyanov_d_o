@@ -53,22 +53,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/male_input" />
 
-    <EditText
-        android:id="@+id/rep_pass_input"
-        style="@style/BaseET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:hint="Повторите пароль"
-        android:inputType="textPassword"
-        android:padding="15dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass_input" />
+<!--    <EditText-->
+<!--        android:id="@+id/rep_pass_input"-->
+<!--        style="@style/BaseET"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:hint="Повторите пароль"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:padding="15dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textColorHint="@color/black"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/pass_input" />-->
 
     <Button
         android:id="@+id/button_reg"
@@ -79,6 +79,7 @@
         android:background="@drawable/fields"
         android:gravity="center"
 
+        android:onClick="RegToLog"
         android:text="Регистрация"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -88,10 +89,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rep_pass_input"
-        app:layout_constraintVertical_bias="0.669"
-        android:onClick="RegToLog"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/pass_input"
+        app:layout_constraintVertical_bias="0.669" />
 
 
 

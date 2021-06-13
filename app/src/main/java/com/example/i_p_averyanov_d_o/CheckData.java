@@ -29,12 +29,21 @@ public class CheckData
 //                    .setMessage(message)
 //                    .show();
         }
-        public static void authConfirmed(final Activity activity, String login, String pass )
+        public static void authConfirmed(final Activity activity, String email, String password )
         {
-            final JSONObject user = new JSONObject();
+            final JSONObject data = new JSONObject();
+            final JSONObject userdata = new JSONObject();
+
             try {
-                user.put( User.EMAIL, login);
-                user.put( User.PASSWORD, pass);
+                userdata.put( "email", email);
+                userdata.put( "password", password);
+
+                data.put("user", userdata);
+
+
+
+
+
 
 
 
@@ -45,15 +54,8 @@ public class CheckData
             }
 
 
-            final JSONObject foruser = new JSONObject();
-
-
-
-
-
-
             JsonObjectRequest logonRequest = new JsonObjectRequest(Request.Method.POST,
-                    URLs.LOGIN, user, new Response.Listener<JSONObject>() {
+                    URLs.LOGIN, data, new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) {
                     try {

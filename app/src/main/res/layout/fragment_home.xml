@@ -14,10 +14,18 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:src="@drawable/kitayoza"
+            android:src="@drawable/logo_denisa"
 
 
             />
+
+
+
+
+
+
+
+
 
         <TextView
             android:layout_width="match_parent"
@@ -30,38 +38,26 @@
             android:textSize="25sp"
             android:textStyle="italic" />
 
-        <FrameLayout
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/skida_kolodki"
 
-            >
+            />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="300dp"
-                android:layout_height="200dp"
-                app:cardCornerRadius="25dp"
-                android:layout_marginTop="20dp"
-                android:layout_gravity="center">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/top_prodazh"
+            android:layout_marginTop="20dp"
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/forframe"
-                    android:scaleType="centerCrop"/>
+            />
 
-                <TextView
-                    android:id="@+id/text_in_frame"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/roboto_bold"
-                    android:textSize="25sp"
-                    android:text="АКЦИИ"
-                    android:textColor="@color/white" />
 
-            </androidx.cardview.widget.CardView>
 
-        </FrameLayout>
+
+
 
         <TextView
             android:layout_width="match_parent"
@@ -78,7 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="#A8A4A4">
+            >
 
 
             <TextView
@@ -116,61 +112,14 @@
 
         </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/roboto_bold"
-            android:gravity="center"
-            android:text="Популярные товары"
-            android:textColor="@color/black"
-            android:textSize="25sp"
 
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            >
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/motornoe_maslo"
-                />
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/kolodki_zadnit"
-                />
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/kolodki_perednit"
-                />
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/generator"
-                />
-
-
-
-
-        </LinearLayout>
 
         <Button
             android:id="@+id/go_to_catalog"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="35dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="35dp"
             android:layout_marginRight="35dp"
             android:layout_marginBottom="45dp"
             android:background="@drawable/fields"
@@ -178,7 +127,8 @@
             android:onClick="GoToCatalog"
 
 
-            app:backgroundTint="@color/red" />
+            app:backgroundTint="@color/red"
+            tools:ignore="OnClick" />
 
 
 
