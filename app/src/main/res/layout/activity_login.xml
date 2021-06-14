@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/shesterni_background"
+
     tools:context=".LoginActivity">
 
     <ImageView
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
 
-        android:src="@drawable/kitayoza"
+        android:src="@drawable/logo_denisa"
         app:layout_constraintBottom_toTopOf="@+id/male_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

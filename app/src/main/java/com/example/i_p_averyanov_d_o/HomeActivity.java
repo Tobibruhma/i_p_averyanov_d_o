@@ -1,6 +1,7 @@
 package com.example.i_p_averyanov_d_o;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -45,5 +46,21 @@ public class HomeActivity extends AppCompatActivity {
     {
         Intent cred_intent = new Intent (HomeActivity.this, CreditionalsActivity.class);
         startActivity(cred_intent);
+    }
+
+    public void GoToVk(View view)
+    {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://ru.stackoverflow.com/questions/559956/%D0%9A%D0%B0%D0%BA-%D0%BF%D0%BE-%D0%BD%D0%B0%D0%B6%D0%B0%D1%82%D0%B8%D1%8E-%D0%BD%D0%B0-button-%D0%BF%D0%B5%D1%80%D0%B5%D0%B9%D1%82%D0%B8-%D0%BD%D0%B0-%D1%81%D0%B0%D0%B9%D1%82"));
+        startActivity(intent);
+    }
+
+    public void GoToSite(View view)
+    {
+        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://kitaeza.herokuapp.com/"));startActivity(intent);
+    }
+
+    public void GoToMap(View view)
+    {
+        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.google.com/maps/place/%D0%9A%D0%B8%D1%82%D0%B0%D1%91%D0%B7%D0%B0,+%D0%B0%D0%B2%D1%82%D0%BE%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D0%B8+%D0%BD%D0%B0+%D0%BA%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B5+%D0%B0%D0%B2%D1%82%D0%BE,+%D0%9B%D0%B8%D1%84%D0%B0%D0%BD,+%D0%94%D0%B6%D0%B8%D0%BB%D0%B8,+%D0%A7%D0%B5%D1%80%D0%B8+%D0%B8+%D1%82.%D0%B4/@64.3933983,105.3079545,3z/data=!4m5!3m4!1s0x417bf6a46ccfcbe3:0xa309ebb11b8c68fe!8m2!3d64.3933983!4d105.3079545"));startActivity(intent);
     }
 }

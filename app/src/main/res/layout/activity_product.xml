@@ -46,12 +46,23 @@
         <TextView
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
-            android:id="@+id/product_name"
+            android:id="@+id/product_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Моторное масло"
             android:textColor="@color/black"
             android:fontFamily="@font/roboto_bold_italic"
+            android:textSize="24sp"
+            android:layout_marginLeft="16dp" />
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Motul 5100 4T"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
             android:textSize="24sp"
             android:layout_marginLeft="16dp" />
 
@@ -67,13 +78,25 @@
             android:fontFamily="@font/roboto_bold"/>
 
         <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Описание"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:textSize="24sp"
+            android:layout_marginLeft="16dp" />
+
+        <TextView
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="С правильным смазочным материалом ваш двигатель будет более надежным и прослужит дольше. Какими бы ни были условия езды (движение, плохая погода ...), безопасно доберитесь до места назначения. Освободите свой разум от технических проблем - у вас есть идеальное решение для пробок в городе. Откройте для себя лучший способ ежедневных поездок на работу и повысьте комфорт при езде с Motul. В сериях 5100 и 510 предлагается высокоэффективное моторное масло на основе Technosynthese® ESTER, предназначенное для снижения износа двигателя и обеспечения необходимых смазочных характеристик для повседневного использования. Превосходит требования большинства производителей мотоциклов. Превосходная устойчивость к сдвигу защищает двигатель и трансмиссию и обеспечивает плавное переключение передач. JASO MA2 протестирован, гарантирует безупречную работу мокрого сцепления"
             android:textColor="@color/black"
-            android:textSize="10sp"
+            android:textSize="15sp"
             android:fontFamily="@font/roboto_bold"
             android:layout_marginLeft="16dp" />
 

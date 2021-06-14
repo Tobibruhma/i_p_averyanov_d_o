@@ -56,23 +56,36 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="MOTUL 5100 4T"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/titleView" />
+
+            <TextView
                 android:id="@+id/priceView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/roboto_bold_italic"
                 android:text="500₽"
                 android:textColor="@color/black"
                 android:textSize="23sp"
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/titleView"
-                app:layout_constraintTop_toBottomOf="@+id/titleView" />
+                app:layout_constraintTop_toBottomOf="@+id/name_view" />
 
             <TextView
                 android:id="@+id/descriptionView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:text="в наличии*"
                 android:textColor="#107509"
                 android:textSize="20sp"
@@ -111,25 +124,37 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
                 app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/name_view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="BYD F3, F3R"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/titleView2" />
 
             <TextView
                 android:id="@+id/priceView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/roboto_bold_italic"
                 android:text="580₽"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/titleView2"
-                app:layout_constraintTop_toBottomOf="@+id/titleView2" />
+                app:layout_constraintTop_toBottomOf="@+id/name_view2" />
 
             <TextView
                 android:id="@+id/descriptionView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:text="в наличии*"
                 android:textColor="#107509"
                 android:textSize="20sp"
@@ -170,23 +195,36 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/name_view3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="KONNER BYD F3"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/titleView3" />
+
+            <TextView
                 android:id="@+id/priceView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/roboto_bold_italic"
                 android:text="656₽"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/titleView3"
-                app:layout_constraintTop_toBottomOf="@+id/titleView3" />
+                app:layout_constraintTop_toBottomOf="@+id/name_view3" />
 
             <TextView
                 android:id="@+id/descriptionView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:text="в наличии*"
                 android:textColor="#107509"
                 android:textSize="20sp"
@@ -227,23 +265,36 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/name_view4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="BYD F3"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toBottomOf="@+id/titleView4" />
+
+            <TextView
                 android:id="@+id/priceView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/roboto_bold_italic"
                 android:text="7300₽"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/titleView4"
-                app:layout_constraintTop_toBottomOf="@+id/titleView4" />
+                app:layout_constraintTop_toBottomOf="@+id/name_view4" />
 
             <TextView
                 android:id="@+id/descriptionView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:text="в наличии*"
                 android:textColor="#107509"
                 android:textSize="20sp"
@@ -276,7 +327,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/roboto_bold_italic"
-                android:text="Коробка передач"
+                android:text="Коробка переключения передач"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
@@ -284,23 +335,36 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/name_view5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="КПП BYD F3"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/titleView5" />
+
+            <TextView
                 android:id="@+id/priceView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/roboto_bold_italic"
                 android:text="16500₽"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/titleView5"
-                app:layout_constraintTop_toBottomOf="@+id/titleView5" />
+                app:layout_constraintTop_toBottomOf="@+id/name_view5" />
 
             <TextView
                 android:id="@+id/descriptionView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:text="в наличии*"
                 android:textColor="#107509"
                 android:textSize="20sp"
@@ -340,23 +404,37 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/name_view6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="BYD F3"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                app:layout_constraintTop_toBottomOf="@+id/titleView6" />
+
+            <TextView
                 android:id="@+id/priceView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+
                 android:fontFamily="@font/roboto_bold_italic"
                 android:text="950₽"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 android:textStyle="italic"
-                app:layout_constraintStart_toStartOf="@+id/titleView6"
-                app:layout_constraintTop_toBottomOf="@+id/titleView6" />
+                app:layout_constraintStart_toStartOf="@+id/name_view6"
+                app:layout_constraintTop_toBottomOf="@+id/name_view6" />
 
             <TextView
                 android:id="@+id/descriptionView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:text="в наличии*"
                 android:textColor="#107509"
                 android:textSize="20sp"

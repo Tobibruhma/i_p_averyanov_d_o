@@ -52,30 +52,53 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="MOTUL 5100 4T"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/titleView" />
 
             <TextView
                 android:id="@+id/priceView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/roboto_bold_italic"
                 android:text="500₽"
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/titleView"
-                app:layout_constraintTop_toBottomOf="@+id/titleView" />
+                app:layout_constraintTop_toBottomOf="@+id/name_view" />
 
             <TextView
                 android:id="@+id/descriptionView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="TextView"
-                android:textColor="#616161"
-                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:text="в наличии*"
+                android:textColor="#107509"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/priceView"
-                app:layout_constraintTop_toBottomOf="@+id/priceView" />
+                app:layout_constraintTop_toBottomOf="@+id/priceView"  />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Удалить из корзины"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_view" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout

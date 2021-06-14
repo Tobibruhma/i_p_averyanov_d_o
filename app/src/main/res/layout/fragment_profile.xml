@@ -111,7 +111,9 @@
                     android:layout_marginLeft="20dp"
                     android:text="Мы Вконтакте"
                     android:textColor="@color/red"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:onClick="GoToVk"
+                    tools:ignore="OnClick" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -121,8 +123,21 @@
                     android:layout_marginLeft="20dp"
                     android:textColor="@color/red"
                     android:fontFamily="@font/roboto_bold"
+                    android:onClick="GoToSite"
 
-                    />
+                    tools:ignore="OnClick" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Мы на карте"
+                    android:textSize="25sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/red"
+                    android:fontFamily="@font/roboto_bold"
+                    android:onClick="GoToMap"
+
+                    tools:ignore="OnClick" />
 
 
                 <TextView

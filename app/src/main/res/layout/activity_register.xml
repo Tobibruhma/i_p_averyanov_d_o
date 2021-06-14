@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/shesterni_background"
+
     tools:context=".RegisterActivity">
 
     <ImageView
         android:id="@+id/loglogo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="150dp"
 
-        android:src="@drawable/kitayoza"
+        android:src="@drawable/logo_denisa"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

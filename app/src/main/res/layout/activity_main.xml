@@ -13,7 +13,7 @@
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="56dp"
 
-        android:src="@drawable/kitayoza"
+        android:src="@drawable/logo_denisa"
         app:layout_constraintHorizontal_bias="0.376"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
