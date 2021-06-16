@@ -15,7 +15,7 @@ import org.json.JSONObject;
 
 public class CheckData
 {
-    //public static boolean checkMail(String mail) {
+//    public static boolean checkMail(String mail) {
 //            return mail.matches("[a-z0-9]+@[a-z0-9]+.[a-z]{1,3}");
 //        }
 
@@ -35,17 +35,10 @@ public class CheckData
             final JSONObject userdata = new JSONObject();
 
             try {
-                userdata.put( "email", email);
-                userdata.put( "password", password);
+                data.put(User.EMAIL, email);
+                data.put(User.PASSWORD, password);
 
-                data.put("user", userdata);
-
-
-
-
-
-
-
+              //  data.put("user", userdata);
 
 
 
@@ -59,15 +52,13 @@ public class CheckData
                 @Override
                 public void onResponse(JSONObject response) {
                     try {
-                        User.getCurrentUser().setToken(response.getLong("token"));
+                    User.getCurrentUser().setToken(response.getLong("token"));
                         Intent intent = new Intent(activity, HomeActivity.class);
                         activity.startActivity(intent);
                         activity.finish();
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-
-
                 }
             }, new Response.ErrorListener() {
                 @Override
@@ -78,6 +69,15 @@ public class CheckData
 
             AppData.getInstance(activity).queue.add(logonRequest);
         }
+
+//    public  static  void openMovie(Activity activity, String movieId)
+//    {
+//        Intent movie = new Intent(activity, MovieScreen.class);
+//        movie.putExtra(MovieItem.MOVIE_ID,movieId);
+//        activity.startActivity(movie);
+//    }
+}
+
 //
 //        public  static  void openMovie(Activity activity, String movieId)
 //        {
@@ -85,4 +85,4 @@ public class CheckData
 //            movie.putExtra(MovieItem.MOVIE_ID,movieId);
 //            activity.startActivity(movie);
 //        }
-}
+

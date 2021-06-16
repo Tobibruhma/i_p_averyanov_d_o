@@ -19,33 +19,35 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void GotoHome(View view) {
-//        if(
-//                //чек на пустоту
-//                !binding.maleInput.getText().toString().equals("")&&
-//                        !binding.passInput.getText().toString().equals("")
-//        )
-//        {
+        if
+        (
+                //чек на пустоту
+                !binding.maleInput.getText().toString().equals("")&&
+                        !binding.passInput.getText().toString().equals("")
+        )
+        {
 //            //проверка маила
-////            if(CheckData.checkMail(binding.maleInput.getText().toString())) {
-//    if (  !binding.maleInput.getText().toString().equals("")) {
-//                CheckData.authConfirmed(LoginActivity.this,
-//                        binding.maleInput.getText().toString(),
-//                        binding.passInput.getText().toString());
-//            }
-//
-//                else
-//                {
-//                    CheckData.makeMessage("Некорректный e-mail",this);
-//                }
-//            }
+//        if (CheckData.checkMail(binding.maleInput.getText().toString())) {
+
+                CheckData.authConfirmed(LoginActivity.this,
+                        binding.maleInput.getText().toString(),
+                        binding.passInput.getText().toString());
+
 //        else
 //            {
-//            CheckData.makeMessage("Еть пустые поля",this);
-//        }
-//
-//    }
-        Intent homeint = new Intent(LoginActivity.this, HomeActivity.class);
-        startActivity(homeint);
-    }
-}
+//                CheckData.makeMessage("Некорректный e-mail", this);
+//            }
+        }
+        else
+            {
+            CheckData.makeMessage("Еть пустые поля", this);
+            }
+
+    }}
+
+
+//        Intent homeint = new Intent(LoginActivity.this, HomeActivity.class);
+//        startActivity(homeint);
+
+
 
