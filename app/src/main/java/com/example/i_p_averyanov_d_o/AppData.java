@@ -10,7 +10,7 @@ import com.bumptech.glide.RequestManager;
 
 public class AppData
 {
-    public  static long token;
+    public  static String token;
     private static AppData instance;
     private final RequestManager glide;
 
@@ -25,8 +25,8 @@ public class AppData
         queue = Volley.newRequestQueue(context);
         glide = Glide.with(context);
     }
-    public void loadImage(String url, ImageView imageView)
-    {
-        glide.load(URLs.IMAGE+url).into(imageView);
-    }
+//    public void loadImage(String url, ImageView imageView)
+//    {
+//        glide.load(URLs.IMAGE+url).into(imageView);
+//    }
 }

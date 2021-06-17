@@ -8,7 +8,7 @@ public class ProductItem
     public  final  static String TITLE = "title";
     public  final  static String DESCRIPRTION = "description";
     public  final  static String PRICE = "price";
-    public final static String IMAGEURL = "imageurl";
+    public final static String IMAGEURL = "images";
     private String title;
     private String description;
     private String price;

@@ -2,11 +2,25 @@ package com.example.i_p_averyanov_d_o;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.example.i_p_averyanov_d_o.databinding.ActivityLoginBinding;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.security.cert.X509Certificate;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 public class LoginActivity extends AppCompatActivity {
     ActivityLoginBinding binding;
@@ -16,9 +30,44 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+//        try {
+//            TrustManager[] trustAllCerts = new TrustManager[]{
+//                    new X509TrustManager() {
+//                        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+//                            return null;
+//                        }
+//
+//                        public void checkClientTrusted(
+//                                java.security.cert.X509Certificate[] certs, String authType) {
+//                        }
+//
+//                        public void checkServerTrusted(
+//                                java.security.cert.X509Certificate[] certs, String authType) {
+//                        }
+//                    }
+//            };
+//
+//// Install the all-trusting trust manager
+//            try {
+//                SSLContext sc = SSLContext.getInstance("SSL");
+//                sc.init(null, trustAllCerts, new java.security.SecureRandom());
+//                HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+//            } catch (Exception e) {
+//            }
+//
+//// Now you can access an https URL without having the certificate in the truststore
+//            try {
+//                URL url = new URL("http://kitaeza-api.herokuapp.com");
+//            } catch (MalformedURLException e) {
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 
-    public void GotoHome(View view) {
+
+        public void GotoHome(View view) {
         if
         (
                 //чек на пустоту

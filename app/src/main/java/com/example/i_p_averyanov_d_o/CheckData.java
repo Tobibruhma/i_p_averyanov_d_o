@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -50,9 +52,9 @@ public class CheckData
             JsonObjectRequest logonRequest = new JsonObjectRequest(Request.Method.POST,
                     URLs.LOGIN, data, new Response.Listener<JSONObject>() {
                 @Override
-                public void onResponse(JSONObject response) {
+                public void onResponse(JSONObject response) { Log.d("Response", response.toString());
                     try {
-                    User.getCurrentUser().setToken(response.getLong("token"));
+                    User.getCurrentUser().setToken(response.getJSONObject("user").getString("token"));
                         Intent intent = new Intent(activity, HomeActivity.class);
                         activity.startActivity(intent);
                         activity.finish();
@@ -67,7 +69,8 @@ public class CheckData
                 }
             });
 
-            AppData.getInstance(activity).queue.add(logonRequest);
+//            AppData.getInstance(activity).queue.add(logonRequest);
+            Volley.newRequestQueue(activity).add(logonRequest);
         }
 
 //    public  static  void openMovie(Activity activity, String movieId)

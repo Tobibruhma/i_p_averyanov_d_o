@@ -441,6 +441,11 @@
                 app:layout_constraintStart_toStartOf="@+id/priceView6"
                 app:layout_constraintTop_toBottomOf="@+id/priceView6" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/products"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

@@ -11,9 +11,13 @@ public class URLs
     public final static String  PRODUCT = BASE + "products/";
 
 
-    public static String PRODUCT_ID(int productItemId) {
-        return  BASE+"products/"+productItemId;
+    public static String PRODUCT_ID (int productItemId)
+
+    {
+        return BASE + "product/" + productItemId;
     }
+
+
 
 }
 

@@ -17,13 +17,13 @@ public class User
             CurrentUser = new User();
         return CurrentUser;
     }
-    private  long token;
+    private String token;
 
-    public long getToken() {
+    public String getToken() {
         return token;
     }
 
-    public void setToken(long token) {
+    public void setToken(String token) {
         this.token = token;
     }
 }
