@@ -67,32 +67,32 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-        public void GotoHome(View view) {
+    public void GotoHome(View view) {
         if
         (
-                //чек на пустоту
-                !binding.maleInput.getText().toString().equals("")&&
+            //чек на пустоту
+                !binding.maleInput.getText().toString().equals("") &&
                         !binding.passInput.getText().toString().equals("")
-        )
-        {
-//            //проверка маила
-//        if (CheckData.checkMail(binding.maleInput.getText().toString())) {
+        ) {
+            //проверка маила
+            if (CheckData.checkMail(binding.maleInput.getText().toString())) {
 
                 CheckData.authConfirmed(LoginActivity.this,
                         binding.maleInput.getText().toString(),
                         binding.passInput.getText().toString());
-
-//        else
-//            {
-//                CheckData.makeMessage("Некорректный e-mail", this);
-//            }
-        }
-        else
-            {
-            CheckData.makeMessage("Еть пустые поля", this);
+            } else {
+                CheckData.makeMessage("Некорректный e-mail", this);
             }
+        } else {
+            CheckData.makeMessage("Еть пустые поля", this);
+        }
+    }
+}
 
-    }}
+
+
+
+
 
 
 //        Intent homeint = new Intent(LoginActivity.this, HomeActivity.class);
