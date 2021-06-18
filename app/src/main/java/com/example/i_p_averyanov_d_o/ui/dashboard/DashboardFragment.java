@@ -13,10 +13,13 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.i_p_averyanov_d_o.R;
+import com.example.i_p_averyanov_d_o.databinding.FragmentDashboardBinding;
 
 public class DashboardFragment extends Fragment {
 
+//        FragmentDashboardBinding binding;
     private DashboardViewModel dashboardViewModel;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -24,6 +27,7 @@ public class DashboardFragment extends Fragment {
                 new ViewModelProvider(this).get(DashboardViewModel.class);
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
         final TextView textView = root.findViewById(R.id.text_dashboard);
+//        binding.getRoot();
         dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
@@ -31,5 +35,9 @@ public class DashboardFragment extends Fragment {
             }
         });
         return root;
+
+
+
+
     }
 }

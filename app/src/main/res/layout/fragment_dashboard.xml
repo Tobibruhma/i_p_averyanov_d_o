@@ -12,8 +12,10 @@
         android:orientation="vertical"
         >
 
+
+
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/search_text"
             android:layout_width="match_parent"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
@@ -22,7 +24,7 @@
             style="@style/BaseET"
             android:padding="10dp"
             android:drawableLeft="@drawable/search_icon"
-            android:hint="Моторное масло"
+            android:hint="Поиск"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
@@ -30,11 +32,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/fields"
+      android:onClick="Search"
+            android:fontFamily="@font/roboto_bold"
+            android:text="ПОИСК"
+            app:backgroundTint="@color/red"
+            tools:ignore="OnClick" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="20dp"
+            android:visibility="invisible">
 
 
             <ImageView

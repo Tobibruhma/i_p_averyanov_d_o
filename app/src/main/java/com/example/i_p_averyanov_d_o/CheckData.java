@@ -15,6 +15,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.URL;
+
 public class CheckData
 {
     public static boolean checkMail(String mail) {
@@ -56,6 +58,7 @@ public class CheckData
                     try {
                     User.getCurrentUser().setToken(response.getJSONObject("user").getString("token"));
                         Intent intent = new Intent(activity, HomeActivity.class);
+//                        intent.putExtra(User.EMAIL, email);
                         activity.startActivity(intent);
                         activity.finish();
                     } catch (JSONException e) {

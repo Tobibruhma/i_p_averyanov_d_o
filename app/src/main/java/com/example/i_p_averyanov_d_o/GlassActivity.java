@@ -7,20 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.i_p_averyanov_d_o.databinding.FragmentHomeBinding;
-import com.example.i_p_averyanov_d_o.databinding.FragmentNotificationsBinding;
-
-public class ProductActivity extends AppCompatActivity {
+public class GlassActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product);
+        setContentView(R.layout.activity_glass);
     }
 
     public void GoBackToCatalog(View view)
     {
-        Intent cat_intent = new Intent (ProductActivity.this, CatalogActivity.class);
+        Intent cat_intent = new Intent (GlassActivity.this, CatalogActivity.class);
         startActivity(cat_intent);
     }
 
@@ -34,7 +31,7 @@ public class ProductActivity extends AppCompatActivity {
 
     public void GoToStory(View view)
     {
-        Intent story = new Intent (ProductActivity.this, StoryActivity.class);
+        Intent story = new Intent (GlassActivity.this, StoryActivity.class);
         startActivity(story);
     }
 }

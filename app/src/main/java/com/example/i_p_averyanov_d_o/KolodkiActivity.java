@@ -7,34 +7,31 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.i_p_averyanov_d_o.databinding.FragmentHomeBinding;
 import com.example.i_p_averyanov_d_o.databinding.FragmentNotificationsBinding;
 
-public class ProductActivity extends AppCompatActivity {
+public class KolodkiActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product);
+        setContentView(R.layout.activity_kolodki);
     }
 
     public void GoBackToCatalog(View view)
     {
-        Intent cat_intent = new Intent (ProductActivity.this, CatalogActivity.class);
-        startActivity(cat_intent);
+        Intent goback = new Intent (KolodkiActivity.this, CatalogActivity.class);
+        startActivity(goback);
     }
 
-
-
+    public void GoToOrder(View view)
+    {
+        Intent goorder = new Intent (KolodkiActivity.this, StoryActivity.class);
+        startActivity(goorder);
+    }
 
     public void GoToBucket(View view)
     {
         Toast.makeText(getApplicationContext(),"Товар добавлен в корзину", Toast.LENGTH_SHORT);
-    }
 
-    public void GoToStory(View view)
-    {
-        Intent story = new Intent (ProductActivity.this, StoryActivity.class);
-        startActivity(story);
     }
 }

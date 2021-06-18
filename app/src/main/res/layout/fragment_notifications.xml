@@ -22,9 +22,11 @@
             android:textSize="26sp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buck_maslo"
             android:layout_marginTop="15dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
 
 
             <ImageView

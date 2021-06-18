@@ -6,13 +6,22 @@
 
     <application
         android:allowBackup="true"
-        android:networkSecurityConfig="@xml/network_security_config"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.I_p_averyanov_d_o">
-        <activity android:name=".ProductActivity"></activity>
+        <activity android:name=".PowerActivity"></activity>
+        <activity android:name=".GlassActivity" />
+        <activity android:name=".CageActivity" />
+        <activity android:name=".BamperZadActivivty" />
+        <activity android:name=".BamperPerActivity" />
+        <activity android:name=".BoxActivivty" />
+        <activity android:name=".GeneratorActivivty" />
+        <activity android:name=".KolodkiActivity" />
+        <activity android:name=".SecProductActivivty" />
+        <activity android:name=".ProductActivity" />
         <activity android:name=".CreditionalsActivity" />
         <activity android:name=".StoryActivity" />
         <activity android:name=".CatalogActivity" />

@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
+import com.example.i_p_averyanov_d_o.databinding.FragmentHomeBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +17,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class HomeActivity extends AppCompatActivity {
+    EditText search_text;
+    TextView mailtext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,11 @@ public class HomeActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
+//        mailtext = findViewById(R.id.mailtext);
+//        mailtext.setText(User.EMAIL);
+
+
     }
 
     public void GoToCatalog(View view)
@@ -62,5 +72,10 @@ public class HomeActivity extends AppCompatActivity {
     public void GoToMap(View view)
     {
         Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.google.com/maps/place/%D0%9A%D0%B8%D1%82%D0%B0%D1%91%D0%B7%D0%B0,+%D0%B0%D0%B2%D1%82%D0%BE%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D0%B8+%D0%BD%D0%B0+%D0%BA%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B5+%D0%B0%D0%B2%D1%82%D0%BE,+%D0%9B%D0%B8%D1%84%D0%B0%D0%BD,+%D0%94%D0%B6%D0%B8%D0%BB%D0%B8,+%D0%A7%D0%B5%D1%80%D0%B8+%D0%B8+%D1%82.%D0%B4/@64.3933983,105.3079545,3z/data=!4m5!3m4!1s0x417bf6a46ccfcbe3:0xa309ebb11b8c68fe!8m2!3d64.3933983!4d105.3079545"));startActivity(intent);
+    }
+
+    public void Search(View view)
+    {
+
     }
 }

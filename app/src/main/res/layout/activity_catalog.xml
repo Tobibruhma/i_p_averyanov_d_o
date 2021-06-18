@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:onClick="GoToProduct"
+
         >
         <TextView
             android:layout_width="wrap_content"
@@ -26,7 +27,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_marginTop="15dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:onClick="GoToProduct">
 
 
             <ImageView
@@ -96,7 +98,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:onClick="GoToKolodki">
 
 
             <ImageView
@@ -108,6 +111,7 @@
                 android:layout_marginLeft="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+
                 app:srcCompat="@drawable/kolodki_zadnit" />
 
             <TextView
@@ -165,7 +169,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:onClick="GoToKolodkiPer">
 
 
             <ImageView
@@ -213,7 +218,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_bold_italic"
-                android:text="656₽"
+                android:text="645₽"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 android:textStyle="italic"
@@ -235,7 +240,9 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:onClick="GoToGenerator">
 
 
             <ImageView
@@ -305,7 +312,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:onClick="GoToBox">
 
 
             <ImageView
@@ -374,7 +382,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:onClick="GoToBamper">
 
 
             <ImageView
@@ -386,7 +395,7 @@
                 android:layout_marginLeft="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/reshetka_radiatora" />
+                app:srcCompat="@drawable/bamper_peredniy" />
 
             <TextView
                 android:id="@+id/titleView6"
@@ -396,7 +405,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/roboto_bold_italic"
-                android:text="Решетка радиатора"
+                android:text="Бампер передний"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
@@ -421,13 +430,12 @@
                 android:id="@+id/priceView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:fontFamily="@font/roboto_bold_italic"
-                android:text="950₽"
+                android:text="7500₽"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 android:textStyle="italic"
-                app:layout_constraintStart_toStartOf="@+id/name_view6"
+                app:layout_constraintStart_toStartOf="@+id/titleView6"
                 app:layout_constraintTop_toBottomOf="@+id/name_view6" />
 
             <TextView
@@ -442,10 +450,294 @@
                 app:layout_constraintTop_toBottomOf="@+id/priceView6" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/products"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:onClick="GoToBamperZad">
+
+
+            <ImageView
+                android:id="@+id/imageView7"
+
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/bamper_zadniy" />
+
+            <TextView
+                android:id="@+id/titleView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_bold_italic"
+                android:text="Бампер задний"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name_view7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="BYD F3"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toBottomOf="@+id/titleView7" />
+
+            <TextView
+                android:id="@+id/priceView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold_italic"
+                android:text="2200₽"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/titleView7"
+                app:layout_constraintTop_toBottomOf="@+id/name_view7" />
+
+            <TextView
+                android:id="@+id/descriptionView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="в наличии*"
+                android:textColor="#107509"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/priceView7"
+                app:layout_constraintTop_toBottomOf="@+id/priceView7" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="GoToCage">
+
+
+            <ImageView
+                android:id="@+id/imageViewLast"
+
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/reshetka_radiatora" />
+
+            <TextView
+                android:id="@+id/titleViewLast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_bold_italic"
+                android:text="Решетка радиатора"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageViewLast"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name_viewLast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="BYD F3"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageViewLast"
+                app:layout_constraintTop_toBottomOf="@+id/titleViewLast" />
+
+            <TextView
+                android:id="@+id/priceViewLast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/roboto_bold_italic"
+                android:text="950₽"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/name_viewLast"
+                app:layout_constraintTop_toBottomOf="@+id/name_viewLast" />
+
+            <TextView
+                android:id="@+id/descriptionViewLast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="в наличии*"
+                android:textColor="#107509"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/priceViewLast"
+                app:layout_constraintTop_toBottomOf="@+id/priceViewLast" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="GoToGlass">
+
+
+            <ImageView
+                android:id="@+id/imageView8"
+
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/steklo" />
+
+            <TextView
+                android:id="@+id/titleView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_bold_italic"
+                android:text="Стекло лобовое"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView8"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name_view8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="BYD F3"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView8"
+                app:layout_constraintTop_toBottomOf="@+id/titleView8" />
+
+            <TextView
+                android:id="@+id/priceView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold_italic"
+                android:text="4000₽"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/titleView8"
+                app:layout_constraintTop_toBottomOf="@+id/name_view8" />
+
+            <TextView
+                android:id="@+id/descriptionView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="в наличии*"
+                android:textColor="#107509"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/priceView8"
+                app:layout_constraintTop_toBottomOf="@+id/priceView8" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="GoToPower">
+
+
+            <ImageView
+                android:id="@+id/imageView9"
+
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/usilitel" />
+
+            <TextView
+                android:id="@+id/titleView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_bold_italic"
+                android:text="Усилитель передний"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name_view9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="BYD F3"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toBottomOf="@+id/titleView9" />
+
+            <TextView
+                android:id="@+id/priceView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold_italic"
+                android:text="2000₽"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/titleView9"
+                app:layout_constraintTop_toBottomOf="@+id/name_view9" />
+
+            <TextView
+                android:id="@+id/descriptionView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="в наличии*"
+                android:textColor="#107509"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/priceView9"
+                app:layout_constraintTop_toBottomOf="@+id/priceView9" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/products"-->
+<!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"/>-->
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
+</layout>

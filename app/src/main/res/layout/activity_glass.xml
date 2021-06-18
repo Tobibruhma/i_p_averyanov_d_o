@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProductActivity">
+    tools:context=".GlassActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,9 +13,9 @@
         android:orientation="vertical">
 
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="400dp" >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp" >
 
             <ImageView
                 android:id="@+id/mainImage"
@@ -25,7 +26,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:src="@drawable/motornoe_maslo" />
+                android:src="@drawable/steklo" />
 
             <ImageView
                 android:id="@+id/backButton"
@@ -41,7 +42,7 @@
                 android:onClick="GoBackToCatalog"/>
 
 
-            </FrameLayout>
+        </FrameLayout>
 
         <TextView
             android:layout_marginStart="16dp"
@@ -49,7 +50,7 @@
             android:id="@+id/product_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Моторное масло"
+            android:text="Стекло лобовое"
             android:textColor="@color/black"
             android:fontFamily="@font/roboto_bold_italic"
             android:textSize="24sp"
@@ -60,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Motul 5100 4T"
+            android:text="BYD F3"
             android:textColor="@color/black"
             android:fontFamily="@font/roboto"
             android:textSize="24sp"
@@ -72,7 +73,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="5dp"
-            android:text="500 ₽"
+            android:text="4000 ₽"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:fontFamily="@font/roboto_bold"/>
@@ -94,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="С правильным смазочным материалом ваш двигатель будет более надежным и прослужит дольше. Какими бы ни были условия езды (движение, плохая погода ...), безопасно доберитесь до места назначения. Освободите свой разум от технических проблем - у вас есть идеальное решение для пробок в городе. Откройте для себя лучший способ ежедневных поездок на работу и повысьте комфорт при езде с Motul. В сериях 5100 и 510 предлагается высокоэффективное моторное масло на основе Technosynthese® ESTER, предназначенное для снижения износа двигателя и обеспечения необходимых смазочных характеристик для повседневного использования. Превосходит требования большинства производителей мотоциклов. Превосходная устойчивость к сдвигу защищает двигатель и трансмиссию и обеспечивает плавное переключение передач. JASO MA2 протестирован, гарантирует безупречную работу мокрого сцепления"
+            android:text="Лобовое стекло на BYD F3"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:fontFamily="@font/roboto_bold"
@@ -111,8 +112,8 @@
             android:layout_marginTop="25dp"
             android:background="@drawable/fields"
             android:text="Купить в один клик"
-            android:onClick="GoToStory"
-            app:backgroundTint="@color/red" />
+            app:backgroundTint="@color/red"
+            android:onClick="GoToStory"/>
         <Button
             android:layout_width="match_parent"
             android:layout_marginLeft="40dp"
@@ -126,4 +127,5 @@
             android:layout_marginBottom="50dp"
             android:onClick="GoToBucket"/>
     </LinearLayout>
+
 </androidx.core.widget.NestedScrollView>
