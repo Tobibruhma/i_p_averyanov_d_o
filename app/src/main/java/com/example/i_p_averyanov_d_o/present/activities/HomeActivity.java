@@ -51,11 +51,7 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(stor_intet);
     }
 
-    public void GoToCreditionals(View view)
-    {
-        Intent cred_intent = new Intent (HomeActivity.this, CreditionalsActivity.class);
-        startActivity(cred_intent);
-    }
+
 
     public void GoToVk(View view)
     {

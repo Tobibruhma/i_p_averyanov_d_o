@@ -16,14 +16,14 @@
         android:textSize="40sp"
         android:fontFamily="@font/roboto_bold_italic"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/male_input"
+        app:layout_constraintBottom_toTopOf="@+id/name_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <EditText
-        android:id="@+id/male_input"
+        android:id="@+id/name_input"
         style="@style/BaseET"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/loglogo" />
 
     <EditText
-        android:id="@+id/pass_input"
+        android:id="@+id/sName_input"
         style="@style/BaseET"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/male_input" />
+        app:layout_constraintTop_toBottomOf="@+id/name_input" />
 
     <EditText
         android:id="@+id/tg_input"
@@ -84,10 +84,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass_input" />
+        app:layout_constraintTop_toBottomOf="@+id/sName_input" />
 
     <Button
-        android:id="@+id/button_sign_login"
+        android:id="@+id/buttonSaveParams"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"

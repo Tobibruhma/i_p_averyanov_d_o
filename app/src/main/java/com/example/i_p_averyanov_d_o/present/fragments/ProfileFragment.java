@@ -1,5 +1,6 @@
 package com.example.i_p_averyanov_d_o.present.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -22,9 +24,13 @@ import com.example.i_p_averyanov_d_o.R;
 import com.example.i_p_averyanov_d_o.URLs;
 import com.example.i_p_averyanov_d_o.User;
 import com.example.i_p_averyanov_d_o.databinding.FragmentProfileBinding;
+import com.example.i_p_averyanov_d_o.present.activities.CreditionalsActivity;
+import com.example.i_p_averyanov_d_o.present.activities.HomeActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.Map;
 
 public class ProfileFragment extends Fragment {
 
@@ -44,9 +50,12 @@ public class ProfileFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         appData = AppData.getInstance(getContext());
         loaded();
+
+        initStartParamsMove();
     }
 
     private void loaded() {
+        String val = URLs.CUR_USER(User.getCurrentUser().getId());
         JsonObjectRequest userReq = new JsonObjectRequest(Request.Method.GET, URLs.CUR_USER(User.getCurrentUser().getId()),
                 null,
         new Response.Listener<JSONObject>() {
@@ -64,6 +73,23 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onErrorResponse(VolleyError error) {
 
+            }
+        }){
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                return CheckData.getAuthorizationHeader();
+            }
+        };
+        appData.queue.add(userReq);
+    }
+
+    private void initStartParamsMove() {
+        binding.goToStoryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent cred_intent = new Intent (getContext(), CreditionalsActivity.class);
+                startActivity(cred_intent);
             }
         });
     }

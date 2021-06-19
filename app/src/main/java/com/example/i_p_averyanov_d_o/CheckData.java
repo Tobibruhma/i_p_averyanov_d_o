@@ -16,8 +16,17 @@ import com.example.i_p_averyanov_d_o.present.activities.HomeActivity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CheckData
 {
+    public  static Map<String,String> getAuthorizationHeader()
+    {
+        Map<String,String> auth = new HashMap<String,String>();
+        auth.put("Authorization", "Token " + User.getCurrentUser().getToken());
+        return  auth;
+    }
     public static boolean checkMail(String mail) {
        return mail.matches("[a-z0-9]+@[a-z0-9]+.[a-z]{1,3}");
         }
