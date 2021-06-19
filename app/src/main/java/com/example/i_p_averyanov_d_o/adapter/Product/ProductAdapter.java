@@ -47,6 +47,13 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         ProductItem item = items.get(position);
         holder.binding.setProduct(item);
         appData.loadedImage(holder.binding.imageView,item.getImageurl());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(listener!=null)
+                    listener.SelectElement(item);
+            }
+        });
     }
 
     @Override

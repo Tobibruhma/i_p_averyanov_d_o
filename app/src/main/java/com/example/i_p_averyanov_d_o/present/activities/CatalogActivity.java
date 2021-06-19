@@ -78,15 +78,16 @@ public class CatalogActivity extends AppCompatActivity {
         adapter.setListener(new ProductListener() {
             @Override
             public void SelectElement(ProductItem productItem) {
-                GoToProduct(productItem.getId());
+                GoToProduct(productItem);
             }
         });
         binding.products.setAdapter(adapter);
     }
 
-    public void GoToProduct(String id) {
+    public void GoToProduct(ProductItem productItem) {
         Intent prod_intent = new Intent(CatalogActivity.this, ProductActivity.class);
-        prod_intent.putExtra(ProductItem.ID,id);
+        AppData.SelectElementInCatalog = productItem;
+        prod_intent.putExtra(ProductItem.ID,productItem.getId());
         startActivity(prod_intent);
     }
 

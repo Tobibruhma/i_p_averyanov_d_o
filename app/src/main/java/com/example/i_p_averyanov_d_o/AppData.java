@@ -10,6 +10,7 @@ import com.bumptech.glide.RequestManager;
 
 public class AppData
 {
+    public static ProductItem  SelectElementInCatalog;
     public  static String token;
     private static AppData instance;
     private final RequestManager glide;
