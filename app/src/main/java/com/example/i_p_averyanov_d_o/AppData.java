@@ -25,6 +25,11 @@ public class AppData
         queue = Volley.newRequestQueue(context);
         glide = Glide.with(context);
     }
+
+    public void loadedImage(ImageView imageView, String url) {
+        glide.load(url)
+                .into(imageView);
+    }
 //    public void loadImage(String url, ImageView imageView)
 //    {
 //        glide.load(URLs.IMAGE+url).into(imageView);
