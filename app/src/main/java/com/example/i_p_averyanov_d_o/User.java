@@ -5,6 +5,7 @@ public class User
     public static final String EMAIL ="email";
 
     public static final String PASSWORD ="password";
+    public static final String ID ="_id";
    // public static final String USER = "user:{" + EMAIL + "," + PASSWORD + "}";
     // public static final String FIRST_NAME ="firstName";
     //public static final String LAST_NAME ="lastName";
@@ -18,6 +19,15 @@ public class User
         return CurrentUser;
     }
     private String token;
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getToken() {
         return token;

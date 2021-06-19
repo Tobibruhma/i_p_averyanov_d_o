@@ -11,26 +11,26 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.I_p_averyanov_d_o">
-        <activity android:name=".PowerActivity"></activity>
-        <activity android:name=".GlassActivity" />
-        <activity android:name=".CageActivity" />
-        <activity android:name=".BamperZadActivivty" />
-        <activity android:name=".BamperPerActivity" />
-        <activity android:name=".BoxActivivty" />
-        <activity android:name=".GeneratorActivivty" />
-        <activity android:name=".KolodkiActivity" />
-        <activity android:name=".SecProductActivivty" />
-        <activity android:name=".ProductActivity" />
-        <activity android:name=".CreditionalsActivity" />
-        <activity android:name=".StoryActivity" />
-        <activity android:name=".CatalogActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
+        android:theme="@style/AppTheme">
+        <activity android:name=".present.activities.PowerActivity"></activity>
+        <activity android:name=".present.activities.GlassActivity" />
+        <activity android:name=".present.activities.CageActivity" />
+        <activity android:name=".present.activities.BamperZadActivivty" />
+        <activity android:name=".present.activities.BamperPerActivity" />
+        <activity android:name=".present.activities.BoxActivivty" />
+        <activity android:name=".present.activities.GeneratorActivivty" />
+        <activity android:name=".present.activities.KolodkiActivity" />
+        <activity android:name=".present.activities.SecProductActivivty" />
+        <activity android:name=".present.activities.ProductActivity" />
+        <activity android:name=".present.activities.CreditionalsActivity" />
+        <activity android:name=".present.activities.StoryActivity" />
+        <activity android:name=".present.activities.CatalogActivity" />
+        <activity android:name=".present.activities.RegisterActivity" />
+        <activity android:name=".present.activities.LoginActivity" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".present.activities.HomeActivity"
             android:label="@string/title_activity_home" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".present.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

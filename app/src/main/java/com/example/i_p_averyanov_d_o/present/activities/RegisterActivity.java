@@ -1,8 +1,7 @@
-package com.example.i_p_averyanov_d_o;
+package com.example.i_p_averyanov_d_o.present.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -10,6 +9,9 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.example.i_p_averyanov_d_o.AppData;
+import com.example.i_p_averyanov_d_o.CheckData;
+import com.example.i_p_averyanov_d_o.URLs;
 import com.example.i_p_averyanov_d_o.databinding.ActivityRegisterBinding;
 
 import org.json.JSONException;

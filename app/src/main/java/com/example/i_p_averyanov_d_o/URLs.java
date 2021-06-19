@@ -17,6 +17,11 @@ public class URLs
         return BASE + "product/" + productItemId;
     }
 
+    public  static String CUR_USER(String userId)
+    {
+
+        return BASE + "userCredentials/" + userId;
+    }
 
 
 }

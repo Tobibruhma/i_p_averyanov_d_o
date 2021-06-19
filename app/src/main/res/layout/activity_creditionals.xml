@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreditionalsActivity">
+    tools:context=".present.activities.CreditionalsActivity">
 
     <TextView
         android:id="@+id/loglogo"
@@ -31,7 +31,6 @@
         android:hint="Имя"
         android:padding="15dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +47,6 @@
         android:hint="Фамилия"
         android:padding="15dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +63,6 @@
         android:hint="Telegram"
         android:padding="15dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +79,6 @@
         android:hint="Вконтакте"
         android:padding="15dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +98,7 @@
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:backgroundTint="#951414"
+        app:backgroundTint="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

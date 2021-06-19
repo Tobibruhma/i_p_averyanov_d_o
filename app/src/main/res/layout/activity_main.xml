@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".present.activities.MainActivity">
 
     <ImageView
         android:id="@+id/logo"
@@ -21,26 +21,25 @@
 
     <Button
         android:id="@+id/button_sign"
-        android:layout_width="320dp"
-        android:layout_height="59dp"
+        style="@style/BaseET"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+
         android:background="@drawable/fields"
         android:onClick="GoToLogin"
-        android:gravity="center_horizontal"
-
         android:text="ВОЙТИ"
-        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="25sp"
+
         android:textStyle="bold"
-        app:backgroundTint="#951414"
+        app:backgroundTint="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.851" />
+        app:layout_constraintTop_toBottomOf="@+id/slogan" />
 
     <Button
+
         android:id="@+id/button_reg"
         android:layout_width="320dp"
         android:layout_height="59dp"
@@ -49,12 +48,12 @@
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slogan"
         app:layout_constraintVertical_bias="0.023" />
 
     <TextView
@@ -80,14 +79,14 @@
         android:id="@+id/no_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Все еще нет аккаунта ?"
+        android:layout_marginTop="16dp"
         android:onClick="GoToReg"
+        android:text="Все еще нет аккаунта ?"
+        android:textColor="@color/blackHint"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_sign"
-        app:layout_constraintVertical_bias="0.647" />
+        app:layout_constraintTop_toBottomOf="@+id/button_sign" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

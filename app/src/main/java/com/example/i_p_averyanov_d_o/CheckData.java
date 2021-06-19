@@ -11,11 +11,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.i_p_averyanov_d_o.present.activities.HomeActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.net.URL;
 
 public class CheckData
 {
@@ -56,7 +55,10 @@ public class CheckData
                 @Override
                 public void onResponse(JSONObject response) { Log.d("Response", response.toString());
                     try {
-                    User.getCurrentUser().setToken(response.getJSONObject("user").getString("token"));
+                        JSONObject userObj = response.getJSONObject("user");
+                        User.getCurrentUser().setToken(userObj.getString("token"));
+                        User.getCurrentUser().setId(userObj.getString(User.ID));
+
                         Intent intent = new Intent(activity, HomeActivity.class);
 //                        intent.putExtra(User.EMAIL, email);
                         activity.startActivity(intent);

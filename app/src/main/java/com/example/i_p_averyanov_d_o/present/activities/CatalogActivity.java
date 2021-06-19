@@ -1,28 +1,12 @@
-package com.example.i_p_averyanov_d_o;
+package com.example.i_p_averyanov_d_o.present.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.i_p_averyanov_d_o.databinding.ActivityCatalogBinding;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static com.example.i_p_averyanov_d_o.CheckData.makeMessage;
 
 public class CatalogActivity extends AppCompatActivity {
     ActivityCatalogBinding binding;

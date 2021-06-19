@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".LoginActivity">
+    tools:context=".present.activities.LoginActivity">
 
     <ImageView
         android:id="@+id/loglogo"
@@ -28,7 +28,6 @@
         android:hint="Почта"
         android:padding="15dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +45,6 @@
         android:inputType="textPassword"
         android:padding="15dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +64,7 @@
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:backgroundTint="#951414"
+        app:backgroundTint="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

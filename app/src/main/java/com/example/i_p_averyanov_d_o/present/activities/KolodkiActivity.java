@@ -1,4 +1,4 @@
-package com.example.i_p_averyanov_d_o;
+package com.example.i_p_averyanov_d_o.present.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.i_p_averyanov_d_o.databinding.FragmentNotificationsBinding;
+import com.example.i_p_averyanov_d_o.R;
 
 public class KolodkiActivity extends AppCompatActivity {
 

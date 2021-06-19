@@ -1,4 +1,4 @@
-package com.example.i_p_averyanov_d_o;
+package com.example.i_p_averyanov_d_o.present.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,17 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-public class BamperZadActivivty extends AppCompatActivity {
+import com.example.i_p_averyanov_d_o.R;
+
+public class BamperPerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bamper_zad_activivty);
+        setContentView(R.layout.activity_bamper_per);
     }
+
 
     public void GoBackToCatalog(View view)
     {
-        Intent cat_intent = new Intent (BamperZadActivivty.this, CatalogActivity.class);
+        Intent cat_intent = new Intent (BamperPerActivity.this, CatalogActivity.class);
         startActivity(cat_intent);
     }
 
@@ -31,7 +34,7 @@ public class BamperZadActivivty extends AppCompatActivity {
 
     public void GoToStory(View view)
     {
-        Intent story = new Intent (BamperZadActivivty.this, StoryActivity.class);
+        Intent story = new Intent (BamperPerActivity.this, StoryActivity.class);
         startActivity(story);
     }
 }

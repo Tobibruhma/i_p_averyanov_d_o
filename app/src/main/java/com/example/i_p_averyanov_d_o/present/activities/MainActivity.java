@@ -1,4 +1,4 @@
- package com.example.i_p_averyanov_d_o;
+ package com.example.i_p_averyanov_d_o.present.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,15 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.i_p_averyanov_d_o.R;
+
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.security.SecureRandom;
-import java.security.cert.X509Certificate;
 
-import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 

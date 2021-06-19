@@ -1,8 +1,10 @@
-package com.example.i_p_averyanov_d_o;
+package com.example.i_p_averyanov_d_o.present.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.i_p_averyanov_d_o.R;
 
 public class StoryActivity extends AppCompatActivity {
 

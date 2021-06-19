@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CatalogActivity">
+    tools:context=".present.activities.CatalogActivity">
 
     <LinearLayout
         android:id="@+id/catalog"
@@ -466,7 +466,7 @@
                 android:layout_marginLeft="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/bamper_zadniy" />
+                app:srcCompat="@drawable/bamper_peredniy" />
 
             <TextView
                 android:id="@+id/titleView7"
@@ -607,7 +607,7 @@
                 android:layout_marginLeft="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/steklo" />
+                app:srcCompat="@drawable/bamper_peredniy" />
 
             <TextView
                 android:id="@+id/titleView8"
@@ -677,7 +677,7 @@
                 android:layout_marginLeft="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/usilitel" />
+                app:srcCompat="@drawable/bamper_peredniy" />
 
             <TextView
                 android:id="@+id/titleView9"
