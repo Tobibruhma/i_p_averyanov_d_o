@@ -9,6 +9,7 @@ public class URLs
         return BASE + "baskets/getProductsFromInstancesOfBasket/" + User.getCurrentUser().basketId;
     }
 
+    public static String ORDERS_USER() {return BASE+"orders/ordersbyuser/"+User.getCurrentUser().getId();}
     public static final String PRODUCTS = BASE+"products/";
     //корневой домен
     public final static String  IMAGE = BASE + "up/images/";
