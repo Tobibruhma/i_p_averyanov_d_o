@@ -113,13 +113,30 @@ public class BasketFragment extends Fragment {
 
     List<Instance> instanceList = new ArrayList<>();
     private void initProductsEx(JSONArray response) {
+
+        List<Instance> bufferList = new ArrayList<>();
         for (int i = 0; i < response.length(); i++) {
             try {
                 JSONObject productElementInfo = response.getJSONObject(i);
-                instanceList.add(new Instance(productElementInfo));
+                bufferList.add(new Instance(productElementInfo));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+        }
+        //перебираем что добавляем
+        for (Instance instance : bufferList) {
+            boolean have =  false;
+            //пытаемся найти копию
+            for (Instance instanceCopy : instanceList) {
+                //если нашли копию
+                if (instanceCopy.productItem.getId().equals(instance.productItem.getId())) {
+                    have = true;
+                    instanceCopy.amount++;
+                    break;
+                }
+            }
+            if(!have)
+                instanceList.add(instance);
         }
         InstanceAdapter adapter = new InstanceAdapter(appData,getLayoutInflater());
         binding.recycler.setAdapter(adapter);
