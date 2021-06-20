@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".present.activities.PowerActivity"></activity>
+        <activity android:name=".present.activities.OrderActivity"></activity>
+        <activity android:name=".present.activities.PowerActivity" />
         <activity android:name=".present.activities.GlassActivity" />
         <activity android:name=".present.activities.CageActivity" />
         <activity android:name=".present.activities.BamperZadActivivty" />

@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@{order.status}"
+        android:text="@{order.getStatus()}"
         android:textColor="#107509"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -2,6 +2,7 @@ package com.example.i_p_averyanov_d_o.present.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -82,6 +83,9 @@ public class StoryActivity extends AppCompatActivity {
     }
 
     private void GoToOrder(OrderItem orderItem) {
-
+        Intent order = new Intent(this,OrderActivity.class);
+        order.putExtra("state",orderItem.getStatus());
+        order.putExtra("orderId",orderItem.getId());
+        startActivity(order);
     }
 }

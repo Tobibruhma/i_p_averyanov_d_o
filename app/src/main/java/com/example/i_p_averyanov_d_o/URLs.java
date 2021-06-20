@@ -1,5 +1,7 @@
 package com.example.i_p_averyanov_d_o;
 
+import android.widget.BaseAdapter;
+
 public class URLs
 {
     private final static String BASE = "https://kitaeza-api.herokuapp.com/api/";
@@ -39,6 +41,13 @@ public class URLs
 
     public static String USER_CREDENTIALS(String idCredential) {
         return  BASE +"userCredentials/"+idCredential;
+    }
+
+    public static String BUY=
+         BASE+"baskets/basketToOrderEmailNotify";
+
+    public static String ORDER(String orderId) {
+        return  BASE+"orders/instancesWithProductByOrderId/"+orderId;
     }
 }
 
