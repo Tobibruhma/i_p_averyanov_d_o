@@ -3,6 +3,8 @@ package com.example.i_p_averyanov_d_o;
 public class URLs
 {
     private final static String BASE = "https://kitaeza-api.herokuapp.com/api/";
+    public final  static String ADD_PRODUCT_IN_BASKET=BASE+"productInstances";
+
     public static  String PRODUCTS_CUR_BASKET() {
         return BASE + "baskets/getProductsFromInstancesOfBasket/" + User.getCurrentUser().basketId;
     }

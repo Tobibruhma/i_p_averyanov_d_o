@@ -83,7 +83,6 @@ public class BasketFragment extends Fragment {
                 e.printStackTrace();
             }
         }
-        if(instanceList.isEmpty())binding.havnt.setVisibility(View.GONE);
         InstanceAdapter adapter = new InstanceAdapter(appData,getLayoutInflater());
         binding.recycler.setAdapter(adapter);
         adapter.setItems(instanceList);
@@ -99,6 +98,8 @@ public class BasketFragment extends Fragment {
     private void InitSum() {
         if(instanceList.size()>0)
         {
+
+            binding.havnt.setVisibility(View.GONE);
             double fullPrice = 0;
             for (Instance instance : instanceList) {
                 if(instance.productItem!=null)
@@ -107,7 +108,11 @@ public class BasketFragment extends Fragment {
             binding.fullPrice.setText(CheckData.returnStringPrice(fullPrice));
             binding.pricePanel.setVisibility(View.VISIBLE);
         }
-        else binding.pricePanel.setVisibility(View.GONE);
+        else {
+            binding.pricePanel.setVisibility(View.GONE);
+
+//            if(instanceList.isEmpty())binding.havnt.setVisibility(View.GONE);
+        }
     }
 
 }
