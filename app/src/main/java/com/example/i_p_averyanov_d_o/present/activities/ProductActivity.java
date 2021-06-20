@@ -9,8 +9,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.i_p_averyanov_d_o.AppData;
-import com.example.i_p_averyanov_d_o.ProductItem;
-import com.example.i_p_averyanov_d_o.R;
+import com.example.i_p_averyanov_d_o.data.ProductItem;
 import com.example.i_p_averyanov_d_o.databinding.ActivityProductBinding;
 
 import static android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD;

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".present.activities.CreditionalsActivity">
+    tools:context=".present.activities.CredentialsActivity">
 
     <TextView
         android:id="@+id/loglogo"

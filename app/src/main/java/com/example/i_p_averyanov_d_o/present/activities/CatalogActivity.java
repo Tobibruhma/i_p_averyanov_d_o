@@ -4,14 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.i_p_averyanov_d_o.AppData;
-import com.example.i_p_averyanov_d_o.ProductItem;
+import com.example.i_p_averyanov_d_o.data.ProductItem;
 import com.example.i_p_averyanov_d_o.URLs;
 import com.example.i_p_averyanov_d_o.adapter.Product.ProductAdapter;
 import com.example.i_p_averyanov_d_o.adapter.Product.ProductListener;

@@ -20,6 +20,7 @@
 
 
     <EditText
+        android:text="yixarih788@greenkic.com"
         android:id="@+id/male_input"
         style="@style/BaseET"
         android:layout_width="0dp"
@@ -36,6 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/loglogo" />
 
     <EditText
+        android:text="12345678"
         android:id="@+id/pass_input"
         style="@style/BaseET"
         android:layout_width="0dp"

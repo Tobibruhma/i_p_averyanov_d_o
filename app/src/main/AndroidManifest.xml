@@ -22,7 +22,7 @@
         <activity android:name=".present.activities.KolodkiActivity" />
         <activity android:name=".present.activities.SecProductActivivty" />
         <activity android:name=".present.activities.ProductActivity" />
-        <activity android:name=".present.activities.CreditionalsActivity" />
+        <activity android:name=".present.activities.CredentialsActivity" />
         <activity android:name=".present.activities.StoryActivity" />
         <activity android:name=".present.activities.CatalogActivity" />
         <activity android:name=".present.activities.RegisterActivity" />

@@ -1,4 +1,6 @@
-package com.example.i_p_averyanov_d_o;
+package com.example.i_p_averyanov_d_o.data;
+
+import com.example.i_p_averyanov_d_o.CheckData;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,7 +16,7 @@ public class ProductItem
     private String title;
     private String id;
     private String description;
-    private double price;
+    public double price;
     private String subtitle;
 
     public String getDescription() {
@@ -62,7 +64,7 @@ public class ProductItem
 
 
     public String getPrice() {
-        return price+"₽";
+        return CheckData.returnStringPrice(price);
     }
 
 

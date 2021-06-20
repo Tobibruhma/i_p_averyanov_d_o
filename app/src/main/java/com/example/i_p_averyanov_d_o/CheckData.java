@@ -6,13 +6,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.i_p_averyanov_d_o.present.activities.HomeActivity;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -69,6 +72,7 @@ public class CheckData
                         User.getCurrentUser().setId(userObj.getString(User.ID));
 
                         Intent intent = new Intent(activity, HomeActivity.class);
+                        loadedBasketId(activity.getApplicationContext());
 //                        intent.putExtra(User.EMAIL, email);
                         activity.startActivity(intent);
                         activity.finish();
@@ -87,6 +91,37 @@ public class CheckData
             Volley.newRequestQueue(activity).add(logonRequest);
         }
 
+    private static  void loadedBasketId(Context context) {
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, URLs.BASKET_USER, null, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                if (response.length() > 0) {
+                    try {
+                        JSONObject basket = response.getJSONObject(0);
+                        User.getCurrentUser().basketId = basket.getString("_id");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        }){
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                return CheckData.getAuthorizationHeader();
+            }
+        };
+        AppData.getInstance(context).queue.add(jsonArrayRequest);
+
+    }
+
+    public static String returnStringPrice(double price) {
+       return price+"₽";
+    }
 //    public  static  void openMovie(Activity activity, String movieId)
 //    {
 //        Intent movie = new Intent(activity, MovieScreen.class);

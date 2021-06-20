@@ -13,7 +13,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.i_p_averyanov_d_o.AppData;
 import com.example.i_p_averyanov_d_o.CheckData;
-import com.example.i_p_averyanov_d_o.R;
 import com.example.i_p_averyanov_d_o.URLs;
 import com.example.i_p_averyanov_d_o.User;
 import com.example.i_p_averyanov_d_o.databinding.ActivityCreditionalsBinding;
@@ -23,7 +22,7 @@ import org.json.JSONObject;
 
 import java.util.Map;
 
-public class CreditionalsActivity extends AppCompatActivity {
+public class CredentialsActivity extends AppCompatActivity {
 
     ActivityCreditionalsBinding binding;
     AppData appData;
@@ -37,7 +36,8 @@ public class CreditionalsActivity extends AppCompatActivity {
         binding.buttonSaveParams.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SaveParams();
+                if(_idCredential!=null)
+                    SaveParams();
             }
         });
     }
@@ -45,27 +45,43 @@ public class CreditionalsActivity extends AppCompatActivity {
         JsonObjectRequest userReq = new JsonObjectRequest(Request.Method.GET, URLs.CUR_USER(User.getCurrentUser().getId()),
                 null,
                 new Response.Listener<JSONObject>() {
+
                     @Override
                     public void onResponse(JSONObject userData) {
+                        JSONObject userCredential = null;
                         try {
-                            binding.nameInput.setText(userData.getString("name"));
+                            userCredential = userData.getJSONObject("userCredential");
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-                        try {
-                            binding.sNameInput.setText(userData.getString("surname"));
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                        try {
-                            binding.vkInput.setText(userData.getString("vkontakte"));
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                        try {
-                            binding.tgInput.setText(userData.getString("telegram"));
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                        if( userCredential!=null)
+                        {
+
+                            try {
+                                _idCredential = userCredential.getString("_id");
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                            try {
+                                binding.nameInput.setText(userCredential.getString("name"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                            try {
+                                binding.sNameInput.setText(userCredential.getString("surname"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                            try {
+                                binding.vkInput.setText(userCredential.getString("vkontakte"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                            try {
+                                binding.tgInput.setText(userCredential.getString("telegram"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
                         }
                     }
                 }, new Response.ErrorListener() {
@@ -81,6 +97,7 @@ public class CreditionalsActivity extends AppCompatActivity {
         };
         appData.queue.add(userReq);
     }
+    String _idCredential = null;
     private void SaveParams() {
         JSONObject userData = new JSONObject();
         try {
@@ -93,7 +110,7 @@ public class CreditionalsActivity extends AppCompatActivity {
         }
 
         JsonObjectRequest userReq = new JsonObjectRequest(Request.Method.PUT,
-                URLs.CUR_USER(User.getCurrentUser().getId()),
+                URLs.USER_CREDENTIALS(_idCredential),
                 userData,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -101,18 +118,24 @@ public class CreditionalsActivity extends AppCompatActivity {
                         try {
                             String status = response.getString("status");
                             if(!status.equals("OK"))
-                                Toast.makeText(CreditionalsActivity.this, "Ошибка", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CredentialsActivity.this, "Ошибка", Toast.LENGTH_SHORT).show();
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            Toast.makeText(CreditionalsActivity.this, "Ошибка", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CredentialsActivity.this, "Ошибка", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
 
+                Toast.makeText(CredentialsActivity.this, "Ошибка", Toast.LENGTH_SHORT).show();
             }
         }){
+            @Override
+            public String getBodyContentType() {
+                return "application/x-www-form-urlencoded; charset=UTF-8";
+            }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 return CheckData.getAuthorizationHeader();

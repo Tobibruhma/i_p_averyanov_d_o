@@ -3,6 +3,9 @@ package com.example.i_p_averyanov_d_o;
 public class URLs
 {
     private final static String BASE = "https://kitaeza-api.herokuapp.com/api/";
+    public static  String PRODUCTS_CUR_BASKET() {
+        return BASE + "baskets/getProductsFromInstancesOfBasket/" + User.getCurrentUser().basketId;
+    }
 
     public static final String PRODUCTS = BASE+"products/";
     //корневой домен
@@ -12,8 +15,9 @@ public class URLs
     public final static String CUR_USER = BASE + "users/current";
 
 
-    public static String PRODUCT_ID (int productItemId)
+    public static final String BASKET_USER = BASE +"baskets/basketsbyuser/"+User.getCurrentUser().getId();
 
+    public static String PRODUCT_ID (int productItemId)
     {
         return BASE + "product/" + productItemId;
     }
@@ -21,9 +25,17 @@ public class URLs
     public  static String CUR_USER(String userId)
     {
 
-        return BASE + "userCredentials/" + userId;
+        return BASE + "userCredentials/credsbyuserid/" + userId;
+    }
+  public  static String ORDERS_USER(String userId)
+    {
+
+        return BASE + "/orders/ordersbyuser/" + userId;
     }
 
 
+    public static String USER_CREDENTIALS(String idCredential) {
+        return  BASE +"userCredentials/"+idCredential;
+    }
 }
 

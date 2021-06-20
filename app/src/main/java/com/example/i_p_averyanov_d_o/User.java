@@ -26,6 +26,8 @@ public class User
     private String token;
     private String id;
 
+    public String basketId=null;
+
     public String getId() {
         return id;
     }

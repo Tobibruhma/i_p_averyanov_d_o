@@ -17,15 +17,12 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 import com.example.i_p_averyanov_d_o.AppData;
 import com.example.i_p_averyanov_d_o.CheckData;
-import com.example.i_p_averyanov_d_o.R;
 import com.example.i_p_averyanov_d_o.URLs;
 import com.example.i_p_averyanov_d_o.User;
 import com.example.i_p_averyanov_d_o.databinding.FragmentProfileBinding;
-import com.example.i_p_averyanov_d_o.present.activities.CreditionalsActivity;
-import com.example.i_p_averyanov_d_o.present.activities.HomeActivity;
+import com.example.i_p_averyanov_d_o.present.activities.CredentialsActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -64,6 +61,7 @@ public class ProfileFragment extends Fragment {
                 try {
                     JSONObject userData = response.getJSONObject("userCredential");
                     binding.mailtext.setText(userData.getString("email"));
+                    appData.loadedImage(binding.imageView,userData.getString("imagerul"));
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Toast.makeText(getContext(), "Ошибка", Toast.LENGTH_SHORT).show();
@@ -88,7 +86,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Intent cred_intent = new Intent (getContext(), CreditionalsActivity.class);
+                Intent cred_intent = new Intent (getContext(), CredentialsActivity.class);
                 startActivity(cred_intent);
             }
         });

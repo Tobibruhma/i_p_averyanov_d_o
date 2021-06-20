@@ -7,10 +7,11 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
+import com.example.i_p_averyanov_d_o.data.ProductItem;
 
 public class AppData
 {
-    public static ProductItem  SelectElementInCatalog;
+    public static ProductItem SelectElementInCatalog;
     public  static String token;
     private static AppData instance;
     private final RequestManager glide;

@@ -9,7 +9,7 @@
     <data>
         <variable
             name="product"
-            type="com.example.i_p_averyanov_d_o.ProductItem" />
+            type="com.example.i_p_averyanov_d_o.data.ProductItem" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"

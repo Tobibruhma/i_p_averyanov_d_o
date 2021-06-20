@@ -1,4 +1,4 @@
-package com.example.i_p_averyanov_d_o.adapter.Product;
+package com.example.i_p_averyanov_d_o.adapter.Instance;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,30 +8,33 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.i_p_averyanov_d_o.AppData;
+import com.example.i_p_averyanov_d_o.adapter.Product.ProductListener;
+import com.example.i_p_averyanov_d_o.data.Instance;
 import com.example.i_p_averyanov_d_o.data.ProductItem;
+import com.example.i_p_averyanov_d_o.databinding.ItemBasketProductBinding;
 import com.example.i_p_averyanov_d_o.databinding.ItemProductBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
+public class InstanceAdapter extends RecyclerView.Adapter<InstanceAdapter.ViewHolder> {
 
-    List<ProductItem> items = new ArrayList<>();
+    List<Instance> items = new ArrayList<>();
     AppData appData;
-    ProductListener listener;
+    InstanceListener listener;
     LayoutInflater inflater;
 
-    public void setListener(ProductListener listener) {
+    public void setListener(InstanceListener listener) {
         this.listener = listener;
     }
 
-    public  ProductAdapter(AppData appData, LayoutInflater inflater)
+    public InstanceAdapter(AppData appData, LayoutInflater inflater)
     {
         this.appData = appData;
         this.inflater = inflater;
     }
 
-    public void setItems(List<ProductItem> items) {
+    public void setItems(List<Instance> items) {
         this.items = items;
         notifyDataSetChanged();
     }
@@ -39,14 +42,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(ItemProductBinding.inflate(inflater, parent, false));
+        return new ViewHolder(ItemBasketProductBinding.inflate(inflater, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ProductItem item = items.get(position);
-        holder.binding.setProduct(item);
-        appData.loadedImage(holder.binding.imageView,item.getImageurl());
+        Instance item = items.get(position);
+        holder.binding.setInstance(item);
+        if(item.productItem!=null)
+            appData.loadedImage(holder.binding.product.imageView,item.productItem.getImageurl());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,8 +66,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        ItemProductBinding binding;
-        public ViewHolder(@NonNull ItemProductBinding binding) {
+        ItemBasketProductBinding binding;
+        public ViewHolder(@NonNull ItemBasketProductBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }
